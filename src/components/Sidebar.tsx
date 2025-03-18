@@ -23,7 +23,7 @@ const Sidebar = () => {
                     href='https://github.com/nehjoshi/'
                     target='_blank'
                     rel='noreferrer'
-                    className="flex items-center justify-center space-x-2 p-2 rounded-md sidebar-social-link relative"
+                    className="space-x-2 p-2 rounded-md sidebar-social-link relative"
                     aria-label="Visit Neh Joshi's GitHub profile (opens in a new tab)">
                     <FaGithub className="social-icon" aria-hidden="true" />
                     <span className="social-link-text">GitHub</span>

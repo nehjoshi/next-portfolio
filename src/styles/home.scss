@@ -1,4 +1,5 @@
-@import "./variables";
+@use "./variables";
+@use "./mixins";
 
 .home-container {
     display: flex;
@@ -7,32 +8,33 @@
 
 // Sidebar styles
 .sidebar-box {
-    border-right: 0.5px solid $powder-blue;
+    border-right: 0.5px solid variables.$powder-blue;
     padding: 20px 20px;
-    background-color: $bg-color;
+    background-color: variables.$bg-color;
 }
 
 .sidebar-social-container {
     margin-top: 30px;
 
     h2 {
-        color: $powder-blue;
+        color: variables.$powder-blue;
         font-size: 1.5rem;
         font-weight: bold;
     }
 
     .sidebar-social-link {
-        background-color: $primary;
+        background-color: variables.$primary;
         width: 95%;
         height: 40px;
         transition: 0.2s all ease;
+        @include mixins.flex-center;
 
         &:hover {
             background-color: lightgray;
         }
 
         .social-icon {
-            color: $bg-color;
+            color: variables.$bg-color;
             font-size: 2rem;
             position: absolute;
             top: 5;
@@ -40,7 +42,7 @@
         }
 
         .social-link-text {
-            color: $bg-color;
+            color: variables.$bg-color;
             font-weight: 700;
             font-family: var(--font-montserrat);
             font-size: 1.2rem;
@@ -61,7 +63,7 @@
 //Main content styles
 main {
     min-height: 100vh;
-    background-color: $bg-color;
+    background-color: variables.$bg-color;
     margin: 0;
     padding: 20px 20px;
     position: relative;
@@ -71,14 +73,41 @@ main {
         margin: 0;
         padding: 0;
         line-height: 1;
-        background: linear-gradient(to right, $powder-blue, $primary, #0000ff);
+        background: linear-gradient(to right, variables.$powder-blue, variables.$primary, #0000ff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
 
     span {
-        color: $primary;
+        color: variables.$primary;
+        font-size: 1.2rem;
+        font-family: variables.$font-mont;
+    }
+
+    .about-text {
+        color: variables.$primary;
+        font-family: variables.$font-mont;
         font-size: 1.2rem;
     }
+
+    .section-exp > h2 {
+        color: variables.$powder-blue;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .section-exp .timeline-container {
+        border-color: variables.$powder-blue;
+        padding: 0px 10px;
+
+    }
+}
+
+//Rightbar styles
+.rightbar-container {
+    border-left: 0.5px solid variables.$powder-blue;
+    padding: 20px 20px;
+    background-color: variables.$bg-color;
 }
