@@ -30,16 +30,6 @@ const Sidebar = () => {
                 </a>
 
                 <a
-                    href='https://x.com/nehjoshi5/'
-                    target='_blank'
-                    rel='noreferrer'
-                    className="flex items-center justify-center space-x-2 p-2 rounded-md sidebar-social-link relative"
-                    aria-label="Visit Neh Joshi's X profile (opens in a new tab)">
-                    <BsTwitterX className="social-icon" aria-hidden="true" />
-                    <span className="social-link-text">X</span>
-                </a>
-
-                <a
                     href='https://www.linkedin.com/in/nehjoshi/'
                     target='_blank'
                     rel='noreferrer'
@@ -59,6 +49,16 @@ const Sidebar = () => {
                 >
                     <FaMedium className="social-icon" aria-hidden="true" />
                     <span className="social-link-text">Medium</span>
+                </a>
+
+                <a
+                    href='https://x.com/nehjoshi5/'
+                    target='_blank'
+                    rel='noreferrer'
+                    className="flex items-center justify-center space-x-2 p-2 rounded-md sidebar-social-link relative"
+                    aria-label="Visit Neh Joshi's X profile (opens in a new tab)">
+                    <BsTwitterX className="social-icon" aria-hidden="true" />
+                    <span className="social-link-text">X</span>
                 </a>
 
             </div>

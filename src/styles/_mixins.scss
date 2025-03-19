@@ -1,5 +1,12 @@
+@use "./variables";
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@mixin text-normal ($size: 1.2rem) {
+    color: variables.$primary;
+    font-size: $size;
+    font-family: variables.$font-mont;
 }

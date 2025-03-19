@@ -4,6 +4,7 @@
 .home-container {
     display: flex;
     min-height: fit-content;
+    overflow: hidden;
 }
 
 // Sidebar styles
@@ -11,6 +12,7 @@
     border-right: 0.5px solid variables.$powder-blue;
     padding: 20px 20px;
     background-color: variables.$bg-color;
+    height: auto;
 }
 
 .sidebar-social-container {
@@ -18,7 +20,7 @@
 
     h2 {
         color: variables.$powder-blue;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
     }
 
@@ -67,6 +69,7 @@ main {
     margin: 0;
     padding: 20px 20px;
     position: relative;
+    overflow-y: auto;
 
     .main-heading {
         font-size: 24rem;
@@ -79,29 +82,42 @@ main {
         background-clip: text;
     }
 
-    span {
-        color: variables.$primary;
-        font-size: 1.2rem;
-        font-family: variables.$font-mont;
+    span, .about-text {
+        @include mixins.text-normal;
     }
 
-    .about-text {
-        color: variables.$primary;
-        font-family: variables.$font-mont;
-        font-size: 1.2rem;
-    }
-
-    .section-exp > h2 {
+    .section-exp > h2, .section-projects > h2 {
         color: variables.$powder-blue;
         font-size: 3rem;
         font-weight: bold;
         margin-top: 20px;
+        margin-bottom: 20px;
     }
 
-    .section-exp .timeline-container {
+    .section-exp > .timeline-container {
         border-color: variables.$powder-blue;
         padding: 0px 10px;
-
+        & * {
+            font-family: variables.$font-mont;
+        }
+        li {
+            margin-bottom: 20px;
+            div {
+                background-color: variables.$powder-blue;
+                border-color: transparent;
+            }
+            h3 {
+                margin-bottom: 10px;
+            }
+            time {
+                margin-top: -20px !important;
+            }
+            ul > li {
+                color: variables.$primary;
+                list-style: circle;
+                margin-left: 20px;
+            }
+        }
     }
 }
 
@@ -110,4 +126,10 @@ main {
     border-left: 0.5px solid variables.$powder-blue;
     padding: 20px 20px;
     background-color: variables.$bg-color;
+    height: auto;
+    h2 {
+        font-weight: bold;
+        color: variables.$powder-blue;
+        font-size: 1.8rem;
+    }
 }
