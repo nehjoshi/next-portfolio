@@ -1,0 +1,15 @@
+@use "./variables";
+@use "./mixins";
+
+//Rightbar styles
+.rightbar-container {
+    border-left: 0.5px solid variables.$dark-gray;
+    padding: 20px 20px;
+    background-color: variables.$bg-color;
+    height: auto;
+    h2 {
+        font-weight: bold;
+        color: variables.$powder-blue;
+        font-size: 1.8rem;
+    }
+}

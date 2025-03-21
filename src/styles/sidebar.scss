@@ -1,0 +1,70 @@
+@use "./variables";
+@use "./mixins";
+
+.sidebar-box {
+    border-right: 0.5px solid variables.$dark-gray;
+    padding: 20px 20px;
+    background-color: variables.$bg-color;
+    height: auto;
+}
+
+.sidebar-social-container {
+    margin-top: 30px;
+
+    h2 {
+        color: variables.$powder-blue;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .sidebar-social-link {
+        background-color: variables.$primary;
+        width: 95%;
+        height: 40px;
+        transition: 0.2s all ease;
+        @include mixins.flex-center;
+        animation: fade-in 0.3s forwards ease-in-out;
+        opacity: 0;
+        &:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        &:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+        &:nth-child(5) {
+            animation-delay: 1.2s;
+        }
+
+        &:hover {
+            background-color: lightgray;
+        }
+
+        .social-icon {
+            color: variables.$bg-color;
+            font-size: 2rem;
+            position: absolute;
+            top: 5;
+            left: 5;
+        }
+
+        .social-link-text {
+            color: variables.$bg-color;
+            font-weight: 700;
+            font-family: var(--font-montserrat);
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+.sidebar-image-container {
+    img {
+        height: 300px !important;
+        width: 300px !important;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

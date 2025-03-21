@@ -7,75 +7,6 @@
     overflow: hidden;
 }
 
-// Sidebar styles
-.sidebar-box {
-    border-right: 0.5px solid variables.$powder-blue;
-    padding: 20px 20px;
-    background-color: variables.$bg-color;
-    height: auto;
-}
-
-.sidebar-social-container {
-    margin-top: 30px;
-
-    h2 {
-        color: variables.$powder-blue;
-        font-size: 1.8rem;
-        font-weight: bold;
-    }
-
-    .sidebar-social-link {
-        background-color: variables.$primary;
-        width: 95%;
-        height: 40px;
-        transition: 0.2s all ease;
-        @include mixins.flex-center;
-        animation: fade-in 0.3s forwards ease-in-out;
-        opacity: 0;
-        &:nth-child(2) {
-            animation-delay: 0.3s;
-        }
-        &:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-        &:nth-child(4) {
-            animation-delay: 0.9s;
-        }
-        &:nth-child(5) {
-            animation-delay: 1.2s;
-        }
-
-        &:hover {
-            background-color: lightgray;
-        }
-
-        .social-icon {
-            color: variables.$bg-color;
-            font-size: 2rem;
-            position: absolute;
-            top: 5;
-            left: 5;
-        }
-
-        .social-link-text {
-            color: variables.$bg-color;
-            font-weight: 700;
-            font-family: var(--font-montserrat);
-            font-size: 1.2rem;
-        }
-    }
-
-}
-
-.sidebar-image-container {
-    img {
-        height: 300px !important;
-        width: 300px !important;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-}
-
 //Main content styles
 main {
     min-height: 100vh;
@@ -86,7 +17,7 @@ main {
     overflow-y: auto;
 
     .main-heading {
-        font-size: 24rem;
+        font-size: 10rem;
         margin: 0;
         padding: 0;
         line-height: 1;
@@ -99,9 +30,46 @@ main {
 
     span, .about-text {
         @include mixins.text-normal;
+        margin-top: 30px;
     }
 
-    .section-exp > h2, .section-projects > h2 {
+    // Explore section
+    .section-explore {
+        margin-top: 40px;
+        .explore-links {
+            @include mixins.flex-center;
+            gap: 20px;
+            .explore-link {
+                @include mixins.flex-center(column);
+                background-color: variables.$primary;
+                font-size: 1.4rem;
+                padding: 10px 15px;
+                border-radius: 10px;
+                font-family: variables.$font-mont;
+                box-shadow: variables.$powder-blue 0px 10px 30px -10px;
+                font-weight: bold;
+                transition: 0.2s all ease;
+                animation: fade-in 0.3s forwards ease-in-out;
+                opacity: 0;
+                &:hover {
+                    box-shadow: blue 0px 10px 30px -10px;
+                    text-decoration: underline;
+                }
+                &:nth-child(1) {
+                    animation-delay: 0.3s;
+                }
+                &:nth-child(2) {
+                    animation-delay: 0.6s;
+                }
+                &:nth-child(3) {
+                    animation-delay: 0.9s;
+                }
+            }
+        }
+    }
+
+    // Experience section
+    .section-exp > h2, .section-projects > h2, .section-explore > h2 {
         color: variables.$powder-blue;
         font-size: 3rem;
         font-weight: bold;
@@ -134,6 +102,49 @@ main {
             }
         }
     }
+
+    .section-projects {
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+        .projects-row {
+            @include mixins.flex-center;
+            width: 100%;
+            gap: 20px;
+            align-items: stretch;
+        }
+        .project {
+            @include mixins.flex-center(column);
+            background-color: variables.$primary;
+            flex: 1;
+            gap: 10px;
+            height: auto;
+            justify-content: flex-start;
+            padding-bottom: 10px;
+            .image-container {
+                width: 100%;
+            }
+        }
+        .project > h3 {
+            font-family: variables.$font-open-sans;
+            color: variables.$secondary;
+            font-weight: bold;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+        .project > p {
+            color: #000;
+            font-family: variables.$font-mont;
+            margin: 0px 10px;
+            font-size: 1.1rem;
+            line-height: 32px;
+        }
+        .project > p > a {
+            text-decoration: underline;
+            color: variables.$secondary;
+        }
+        
+    }
 }
 
 @keyframes fade-in {
@@ -147,15 +158,3 @@ main {
     }
 }
 
-//Rightbar styles
-.rightbar-container {
-    border-left: 0.5px solid variables.$powder-blue;
-    padding: 20px 20px;
-    background-color: variables.$bg-color;
-    height: auto;
-    h2 {
-        font-weight: bold;
-        color: variables.$powder-blue;
-        font-size: 1.8rem;
-    }
-}

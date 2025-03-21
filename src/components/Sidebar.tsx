@@ -2,6 +2,7 @@ import React from 'react'
 import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import Image from 'next/image';
+import "@/styles/sidebar.scss";
 
 const Sidebar = () => {
     return (
@@ -36,7 +37,7 @@ const Sidebar = () => {
                     className="flex items-center justify-center space-x-2 p-2 rounded-md sidebar-social-link relative"
                     aria-label="Visit Neh Joshi's LinkedIn profile (opens in a new tab)"
                 >
-                    <FaLinkedin className="social-icon" aria-hidden="true" />
+                    <FaLinkedin className="social-icon" aria-hidden="true"  />
                     <span className="social-link-text">LinkedIn</span>
                 </a>
 
