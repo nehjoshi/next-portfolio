@@ -2,6 +2,7 @@ import React from 'react'
 import "@/styles/home.scss"
 import Sidebar from '@/components/Sidebar'
 import Rightbar from '@/components/Rightbar'
+import Link from 'next/link'
 
 const Home = () => {
   return (
@@ -17,8 +18,8 @@ const Home = () => {
         <section className="section-explore">
           <h2>Get To Know Me</h2>
           <div className="explore-links">
-            <a href="#experience" className="explore-link">Experience</a>
-            <a href="#projects" className="explore-link">Projects</a>
+            <Link href="/experience" className="explore-link">Experience</Link>
+            <Link href="/projects" className="explore-link">Projects</Link>
             <a href="#projects" className="explore-link">Skills</a>
           </div>
         </section>

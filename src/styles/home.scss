@@ -12,7 +12,7 @@ main {
     min-height: 100vh;
     background-color: variables.$bg-color;
     margin: 0;
-    padding: 20px 20px;
+    padding: 20px 40px;
     position: relative;
     overflow-y: auto;
 
@@ -79,7 +79,7 @@ main {
 
     .section-exp > .timeline-container {
         border-color: variables.$powder-blue;
-        padding: 0px 10px;
+        padding: 0px 30px;
         & * {
             font-family: variables.$font-mont;
         }
@@ -91,6 +91,7 @@ main {
             }
             h3 {
                 margin-bottom: 10px;
+                font-size: 1.4rem;
             }
             time {
                 margin-top: -20px !important;
@@ -99,6 +100,7 @@ main {
                 color: variables.$primary;
                 list-style: circle;
                 margin-left: 20px;
+                font-size: 1.2rem;
             }
         }
     }
