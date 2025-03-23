@@ -30,9 +30,9 @@ const Home = () => {
             <Link href="/skills" className="explore-link">
               Skills
             </Link>
-            <a href="blog" className="explore-link">
+            <Link href="/blog" className="explore-link">
               Blog
-            </a>
+            </Link>
           </div>
         </section>
       </main>

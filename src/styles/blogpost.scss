@@ -1,0 +1,69 @@
+@use "./mixins";
+@use "./variables";
+
+.page-container {
+    background-color: variables.$bg-color;
+    width: 100%;
+    min-height: 100vh;
+}
+.blog {
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px 40px;
+    border-left: 1px solid variables.$dark-gray;
+    border-right: 1px solid variables.$dark-gray;
+
+    &__date {
+        color: variables.$primary;
+        font-size: 1.2rem;
+        font-family: variables.$font-mont;
+    }
+
+    &__title {
+        font-size: clamp(2rem, 3.5vw, 3.5rem);
+        font-family: variables.$font-open-sans;
+        font-weight: bold;
+        color: variables.$powder-blue;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        font-family: variables.$font-mont;
+        color: variables.$primary;
+    }
+
+    &__main_image_container {
+        width: 90%;
+        max-height: 600px;
+        display: flex;
+        justify-content: center;
+        object-fit: cover;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    &__main_image_caption {
+        font-family: variables.$font-mont;
+        font-size: 1.2rem;
+        color: variables.$primary;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    &__paragraph, &__quote {
+        font-family: variables.$font-mont;
+        font-size: 1.5rem;
+        color: variables.$primary;
+        margin-top: 20px;
+        line-height: 1.5;
+    }
+
+    &__quote {
+        margin-top: 20px;
+        line-height: 1.5;
+        border-left: 5px solid variables.$powder-blue;
+        padding-left: 10px;
+        font-style: italic;
+    }
+}
