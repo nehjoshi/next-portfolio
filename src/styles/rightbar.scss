@@ -13,3 +13,34 @@
         font-size: 1.8rem;
     }
 }
+// Actual blog item
+.blog-item {
+    margin-top: 15px;
+    width: 95%;
+    position: relative;
+    background-color: variables.$primary;
+    border-radius: 10px;
+    .blog-image-container {
+        width: 100%;
+    }
+    .blog-text-container {
+        padding: 10px;
+        font-family: variables.$font-mont;
+        & * {
+            font-family: variables.$font-mont;
+        }
+        h3 {
+            color: variables.$secondary;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        a {
+            margin: 0 auto;
+            display: block;
+            color: variables.$secondary;
+            text-decoration: underline;
+        }
+    }
+
+}
