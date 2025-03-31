@@ -21,7 +21,7 @@ const page = () => {
             <li className="mb-10 ms-4">
               <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5"></div>
               <time className="mb-2 text-md leading-none text-gray-200">
-                June 2024 - Sep 2024
+                June 2024 - Present
               </time>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 Software Engineer (Contract), <i>BoomerRoomers LLC</i>
